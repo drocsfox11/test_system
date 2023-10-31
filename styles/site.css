@@ -1,0 +1,123 @@
+body, html
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: helvetica, arial;
+	background: #f6f6f6;
+	color: #111;
+}
+
+.wrapper
+{
+	width: 90%;
+	margin: 0 auto;
+	
+}
+
+
+
+.quiz-frame
+{
+	border: 0;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	margin: 20px;
+	
+}
+
+#language{
+	width: 32px;
+	height: 32px;
+}
+
+#logo{
+	width: 177px;
+}
+
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	margin-right: 90px;
+	margin-bottom: 50px;
+}
+
+#test_cards{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+}
+
+#main_h{
+	font-family: 'TT-BOLD';
+	font-size: 48px;
+
+	
+}
+
+
+#b_text{
+	font-family: 'TT-REGULAR';
+	font-size: 16px;
+	text-align: center;
+	
+}
+
+#card1{
+	background-image: url("../icons/html.svg");
+	height: 711px;
+	width: 321px;
+	text-align: center;
+}
+
+#card2{
+	background-image: url("../icons/css.svg");
+	height: 711px;
+	width: 321px;
+	text-align: center;
+}
+
+#card3{
+	background-image: url("../icons/js.svg");
+	background-size: cover;
+	height: 711px;
+	width: 321px;
+	text-align: center;
+}
+
+#button{
+	width: 220px;
+	height: 75px;
+	background-image: url("../icons/start_b.svg");
+	background-size: cover;
+	z-index: 2;
+	margin: 0 auto;
+	margin-top: 150px;
+}
+
+#name{
+	font-family: 'TT-REGULAR';
+	font-size: 26px;
+	margin-top: 130px;
+}
+
+#about{
+	font-family: 'TT-REGULAR';
+	font-size: 26px;
+	margin-top: 50px;
+}
+
+#questions{
+	font-family: 'TT-REGULAR';
+	font-size: 26px;
+	margin-top: 50px;
+}
+
+#score1,#score2, #score3{
+	font-family: 'TT-REGULAR';
+	font-size: 26px;
+	margin-top: 50px;
+}

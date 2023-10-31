@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'TT-BOLD';
+    src: url('../fonts/TTFirsNeue-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'TT-MEDIUM';
+    src: url('../fonts/TTFirsNeue-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'TT-REGULAR';
+    src: url('../fonts/TTFirsNeue-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'TT-DBOLD';
+    src: url('../fonts/TTFirsNeue-DemiBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }

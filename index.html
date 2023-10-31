@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="HandheldFriendly" content="true"/>
+		<link rel="stylesheet" type="text/css" href="styles/site.css">
+		<link rel="stylesheet" href="styles/fonts.css">
+	</head>
+	<body onload="load()">
+		<div class="wrapper" >
+			<div class="container">
+				<nav>
+					<img id="logo" src="icons/logo.png" alt="">
+					<h1 id="main_h">Статический дизайн</h1>
+					<img id="language" onclick="changeLanguage()" src="icons/russia.png" alt="">
+				</nav>
+	
+				<section id="test_cards">
+					<div id="card1">
+						<p id="name">HTML</p>
+						<p id="about">Тест на знание материала по HTML</p>
+						<p id="questions">10 вопросов</p>
+						<p id="score1">0/10</p>
+						<a href="quiz_html.html"><div id="button"></div></a>
+
+					</div>
+					<div id="card2">
+						<p id="name">CSS</p>
+						<p id="about">Тест на знание материала по CSS</p>
+						<p id="questions">10 вопросов</p>
+						<p id="score2">0/10</p>
+						<a href="quiz_css.html"><div id="button"></div></a>
+					</div>
+					<div id="card3">
+						<p id="name">JS</p>
+						<p id="about">Тест на знание материала по JS</p>
+						<p id="questions">10 вопросов</p>
+						<p id="score3">0/10</p>
+						<a href="quiz_js.html"><div id="button"></div></a>
+					</div>
+				</section>
+	
+				<p id="b_text">ВлГУ. ИиТР. Кафедра ИСПИ. 2023.</p>
+			</div>
+			
+		</div>
+	</body>
+	<script>
+		function load(){
+			document.getElementById('score1').textContent = localStorage.getItem('html')+"/10"
+			document.getElementById('score2').textContent = localStorage.getItem('css')+"/10"
+			document.getElementById('score3').textContent = localStorage.getItem('js')+"/10"
+		}
+	</script>
+</html>
