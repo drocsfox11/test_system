@@ -28,7 +28,33 @@ function changeLanguage(){
 }
 
 function loading(){
-    localStorage.setItem('language','ru')
+    var language = localStorage.getItem('language')
+    console.log(language)
+    if(language==null){
+        localStorage.setItem('language','ru')
+    }
+
+    if(language=='cn'){
+        document.getElementById('language').src = 'icons/china.png'
+        document.getElementById('main_h').textContent = '课程：静态设计';
+        document.getElementById('html_about').textContent = '材料知识测试 HTML'
+        document.getElementById('html_questions').textContent = '10 个问题'
+        document.getElementById('css_about').textContent = '材料知识测试 HTML'
+        document.getElementById('css_questions').textContent = '10 个问题'
+        document.getElementById('js_about').textContent = '材料知识测试 HTML'
+        document.getElementById('js_questions').textContent = '10 个问题'
+        document.getElementById('b_text').textContent = 'VLSU。 I&TR。 ISPI 部门。 2023 年。'
+    }else{
+        document.getElementById('language').src = 'icons/russia.png'
+        document.getElementById('main_h').textContent = 'Статический дизайн';
+        document.getElementById('html_about').textContent = 'Тест на знание материала по HTML'
+        document.getElementById('html_questions').textContent = '10 вопросов'
+        document.getElementById('css_about').textContent = 'Тест на знание материала по CSS'
+        document.getElementById('css_questions').textContent = '10 вопросов'
+        document.getElementById('js_about').textContent = 'Тест на знание материала по JS'
+        document.getElementById('js_questions').textContent = '10 вопросов'
+        document.getElementById('b_text').textContent = 'ВлГУ. ИиТР. Кафедра ИСПИ. 2023.'
+    }
     var html =localStorage.getItem('html')
     var css = localStorage.getItem('css')
     var js = localStorage.getItem('js')

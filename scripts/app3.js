@@ -72,9 +72,9 @@ class Quiz
 	//Если вопросы кончились, этот метод проверит, какой результат получил пользователь
 	End()
 	{
-		for(let i = 0; i < this.results.length; i++)
+		for(let i = 0; i < this.results[this.language].length; i++)
 		{
-			if(this.results[i].Check(this.score))
+			if(this.results[this.language][i].Check(this.score))
 			{
 				this.result = i;
 			}
@@ -132,18 +132,19 @@ class Result
 
 //Массив с результатами
 const results = {
-'ru':
-[
-	new Result("Вы в совершенстве владеете материалом", 10),
-	new Result("Вы уже хорошо разбираетесь", 8),
-	new Result("Ваш уровень выше среднего", 5),
-	new Result("Вам стоит подучить тему", 2)
-], 'cn':[
-	new Result("您精通此材料", 10),
-	new Result("您已经对该主题有了很好的理解", 8),
-	new Result("您的知识水平高于平均水平", 5),
-	new Result("你应该学习这个主题", 2)
-]};
+	'ru':[
+		new Result("Вам стоит подучить тему", 2),
+		new Result("Ваш уровень выше среднего", 5),
+		new Result("Вы уже хорошо разбираетесь", 8),
+		new Result("Вы в совершенстве владеете материалом", 10)
+	],
+	'cn':[
+		new Result("你应该学习这个主题", 2),
+		new Result("您的知识水平高于平均水平", 5),
+		new Result("您已经对该主题有了很好的理解", 8),
+		new Result("您精通此材料", 10)
+		]
+	};
 
 //Массив с вопросами
 const questions_ru = 
@@ -422,7 +423,7 @@ function Update()
 	{
 		//Если это конец, то выводим результат
 		buttonsElem.innerHTML = "";
-		headElem.innerHTML = quiz.results[quiz.result].text;
+		headElem.innerHTML = quiz.results[localStorage.getItem('language')][quiz.result].text;
 		pagesElem.innerHTML = "Очки: " + quiz.score;
 		localStorage.setItem('js',quiz.score);
 		var timer = setTimeout(function() {
