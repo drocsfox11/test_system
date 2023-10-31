@@ -131,13 +131,19 @@ class Result
 }
 
 //Массив с результатами
-const results = 
+const results = {
+'ru':
 [
-	new Result("Вам многому нужно научиться", 0),
-	new Result("Вы уже неплохо разбираетесь", 2),
-	new Result("Ваш уровень выше среднего", 4),
-	new Result("Вы в совершенстве знаете тему", 6)
-];
+	new Result("Вы в совершенстве владеете материалом", 10),
+	new Result("Вы уже хорошо разбираетесь", 8),
+	new Result("Ваш уровень выше среднего", 5),
+	new Result("Вам стоит подучить тему", 2)
+], 'cn':[
+	new Result("您精通此材料", 10),
+	new Result("您已经对该主题有了很好的理解", 8),
+	new Result("您的知识水平高于平均水平", 5),
+	new Result("你应该学习这个主题", 2)
+]};
 
 //Массив с вопросами
 const questions_ru = 
@@ -232,145 +238,152 @@ const questions_ru =
 
 	new Question("Как добавить элемент веб-страницы в массив?", 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer("array.unshift(element)", 0),
+		new Answer("array.append(element)", 0),
+		new Answer("array.add(element)", 0),
+		new Answer("array.push(element)", 1)
 	]),
 
-	new Question("", 
+	new Question("Как очистить массив?", 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer("array = []", 1),
+		new Answer("array.clear()", 0),
+		new Answer("array.empty()", 0),
+		new Answer("array.remove()", 0)
 	]),
 
-	new Question("", 
+	new Question("Как проверить, что в массиве есть элементы?", 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer("array.length > 0", 1),
+		new Answer("array.isEmpty()", 0),
+		new Answer("array.hasElements()", 0),
+		new Answer("array.exists()", 0)
 	]),
 
-	new Question("", 
+	new Question("Как проверить, есть ли атрибут с названием у элемента?", 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer('element.hasAttribute("attributeName")', 1),
+		new Answer('element.getAttribute("attributeName") !== null', 0),
+		new Answer('element.attributeName !== undefined', 0),
+		new Answer('element.containsAttribute("attributeName")', 0)
 	]),
 
-	new Question("", 
+	new Question("Как вывести сообщение в консоль в JavaScript?", 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer('console.logMessage("Hello");', 0),
+		new Answer('log.console("Hello");', 0),
+		new Answer('print("Hello");', 0),
+		new Answer('console.log("Hello");', 1)
 	]),
 
-	new Question("", 
+	new Question("Какой символ используется для комментирования однострочного комментария в JavaScript?", 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer("//", 1),
+		new Answer("--", 0),
+		new Answer("/*", 0),
+		new Answer("#", 0)
 	]),
 
-	new Question("", 
+	new Question("Какой оператор используется для сравнения значений в JavaScript?", 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer("==", 0),
+		new Answer("!=", 0),
+		new Answer("===", 1),
+		new Answer("!==", 0)
 	]),
 
-	new Question("", 
+	new Question("Как проверить длину строки в JavaScript?", 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer("string.count();", 0),
+		new Answer("string.size();", 0),
+		new Answer("string.length;", 1),
+		new Answer("string.checkLength();", 0)
 	]),
 
-	new Question("", 
+	new Question("Каким образом можно округлить число в JavaScript?", 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer("Math.floor(num);", 0),
+		new Answer("Math.round(num);", 0),
+		new Answer("Math.ceil(num);", 0),
+		new Answer("Все вышеперечисленные варианты", 1)
 	]),
 
-	new Question("", 
+	new Question("Каким образом можно сгенерировать случайное число в диапазоне от 1 до 10 в JavaScript?", 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer("Math.random(1, 10);", 0),
+		new Answer("Math.random() * 10;", 1),
+		new Answer("Math.randomRange(1, 10);", 0),
+		new Answer("random(1, 10);", 0)
 	]),
 
-	new Question("", 
+	new Question("Как проверить, является ли переменная массивом в JavaScript?", 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer(" isArray(variable);", 0),
+		new Answer("variable.isArray();", 0),
+		new Answer("variable instanceof Array;", 0),
+		new Answer("Все вышеперечисленные варианты", 1)
 	]),
 
-	new Question("", 
+	new Question("Как объявить функцию в JavaScript?", 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer("function myFunction() {}", 1),
+		new Answer("def myFunction() {}", 0),
+		new Answer("myFunction = function() {}", 0),
+		new Answer("let myFunction() {}", 0)
 	]),
 
-	new Question("", 
+	new Question("Каким образом можно преобразовать строку в верхний регистр в JavaScript?", 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer("string.toUpperCase();", 1),
+		new Answer("string.toUpper();", 0),
+		new Answer("string.upperCase();", 0),
+		new Answer("string.upper();", 0)
 	]),
 
-	new Question("", 
+	new Question("В чем разница между confirm и prompt?", 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer("confirm вызывает диалоговое окно с полем для ввода, prompt - окно с подтверждением", 0),
+		new Answer("Они ничем не отличаются", 0),
+		new Answer("prompt вызывает диалоговое окно с полем для ввода, confirm - окно с подтверждением", 1)
 	]),
 
-	new Question("", 
+	new Question('Что будет записано в переменную test?\nvar a = 5;\nvar test = 5 != a ? "Yes" : "No";', 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer("5", 0),
+		new Answer("Будет ошибка", 0),
+		new Answer("No", 1),
+		new Answer("a", 0),
+		new Answer("Yes", 0)
 	]),
 
-	new Question("", 
+	new Question('Почему код ниже не будет работать?\n<script type="javascript/text">\nconsole.log("Hi!")\n</script>\n', 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer("Неверно записан атрибут type", 1),
+		new Answer('Необходима точка с запятой после console.log("Hi!")', 0),
+		new Answer('Запись console.log необходимо прописывать лишь в отдельных файлах', 0)
 	]),
 
-	new Question("", 
+	new Question("В чем отличие между локальной и глобальной переменной?", 
 	[
-		new Answer("", 1),
-		new Answer("", 0),
-		new Answer("", 1),
-		new Answer("", 0)
+		new Answer("Глобальные видны повсюду, локальные только в функциях", 1),
+		new Answer("Отличий нет", 0),
+		new Answer("Глобальные можно переопределять, локальные нельзя", 0),
+		new Answer("Локальные видны повсюду, глобальные только в функциях", 0),
+		new Answer("Локальные можно переопределять, глобальные нельзя", 0)
 	]),
 
 	
 ];
 
+function getRandomElements(array, count) {
+	const shuffled = array.sort(() => 0.5 - Math.random());
+	return shuffled.slice(0, count);
+  };
+const current_questions = getRandomElements(questions,10);
+
+
 //Сам тест
-const quiz = new Quiz(1, questions, results);
+const quiz = new Quiz(1, current_questions, results);
 
 Update();
 

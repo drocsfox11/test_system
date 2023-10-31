@@ -271,8 +271,14 @@ const questions =
 	])
 ];
 
+function getRandomElements(array, count) {
+	const shuffled = array.sort(() => 0.5 - Math.random());
+	return shuffled.slice(0, count);
+  };
+const current_questions = getRandomElements(questions,10);
+
 //Сам тест
-const quiz = new Quiz(1, questions, results);
+const quiz = new Quiz(1, current_questions, results);
 
 Update();
 

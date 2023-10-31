@@ -224,9 +224,9 @@ const questions =
 
 	new Question("Какой HTML атрибут указывает положение изображения внутри тега image?", 
 	[
-		new Answer("&ltul&gt", 1),
-		new Answer("&ltol&gt", 0),
-		new Answer("&ltli&gt", 0)
+		new Answer("src", 1),
+		new Answer("href", 0),
+		new Answer("id", 0)
 	]),
 
 	new Question("Какой элемент является блочным?", 
@@ -376,11 +376,15 @@ const questions =
 	])
 ];
 
+function getRandomElements(array, count) {
+	const shuffled = array.sort(() => 0.5 - Math.random());
+	return shuffled.slice(0, count);
+  };
+const current_questions = getRandomElements(questions,10);
 
-const current_questions = []
 
 //Сам тест
-const quiz = new Quiz(1, questions, results);
+const quiz = new Quiz(1, current_questions, results);
 
 Update();
 
