@@ -694,8 +694,9 @@ function DisableButtons()
 {
 	let btns = document.getElementsByClassName("button");
 	for(let i = 0; i < btns.length; i++)
-	{
-		
+	{	
+		//Делаем кнопки серыми
+		btns[i].className = "button button_passive";
 		btns[i].disabled = true;
 	}
 }
@@ -704,15 +705,9 @@ function Click(index)
 {
 	//Получаем номер правильного ответа
 	let correct = quiz.Click(index);
+	//Выключаем кнопки
 	DisableButtons();
-	//Находим все кнопки
-	let btns = document.getElementsByClassName("button");
 
-	//Делаем кнопки серыми
-	for(let i = 0; i < btns.length; i++)
-	{
-		btns[i].className = "button button_passive";
-	}
 
 	
 
