@@ -669,6 +669,7 @@ function Update()
 		headElem.innerHTML = quiz.results[localStorage.getItem('language')][quiz.result].text;
 		pagesElem.innerHTML = "Очки: " + quiz.score;
 		localStorage.setItem('html',quiz.score);
+		localStorage.setItem('html_hasR', 1); 
 		var timer = setTimeout(function() {
             window.location='index.html'
         }, 5000);
