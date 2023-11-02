@@ -58,19 +58,19 @@ function loading(){
         document.getElementById('js_questions').textContent = '10 вопросов'
         document.getElementById('b_text').textContent = 'ВлГУ. ИиТР. Кафедра ИСПИ. 2023.'
     }
-    if(test1_r == null){
+    if(test1_r == null || test1_r==0){
         localStorage.setItem('html_hasR',0)
     }
     else{
         document.getElementById('btn1').style.pointerEvents = 'none';
     }
-    if(test2_r == null){
+    if(test2_r == null || test2_r==0){
         localStorage.setItem('css_hasR',0)
     }
     else{
         document.getElementById('btn2').style.pointerEvents = 'none';
     }
-    if(test3_r == null){
+    if(test3_r == null || test3_r==0){
         localStorage.setItem('js_hasR',0)
     }
     else{
