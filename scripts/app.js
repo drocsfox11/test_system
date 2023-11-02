@@ -231,7 +231,7 @@ const questions = {
 		new Answer("id", 0)
 	]),
 
-	new Question("Какой HTML атрибут указывает положение изображения внутри тега image?", 
+	new Question("Какой HTML атрибут указывает положение изображения внутри тега img?", 
 	[
 		new Answer("src", 1),
 		new Answer("href", 0),
@@ -361,14 +361,14 @@ const questions = {
 	[
 		new Answer("article", 0),
 		new Answer("menu", 0),
-		new Answer("command", 1),
+		new Answer("cmd", 1),
 		new Answer("navigation", 0),
 		new Answer("mark", 0)
 	]),
 
 	new Question("Для чего используется тег pre?", 
 	[
-		new Answer("Используется для вывода текста", 0),
+		new Answer("Используется для вывода форматированного текста", 1),
 		new Answer("Используется для вывода цитаты", 0),
 		new Answer("Используется для вывода адреса", 0),
 		new Answer("Используется для вывода аббревиатуры", 0),
@@ -464,7 +464,7 @@ const questions = {
 		new Answer("id", 0)
 	]),
 
-	new Question("在图像标记中，哪个 HTML 属性指定了图像的路径？", 
+	new Question("在 img 标记中，哪个 HTML 属性指定了图像文件的路径", 
 	[
 		new Answer("src", 1),
 		new Answer("href", 0),
@@ -594,14 +594,14 @@ const questions = {
 	[
 		new Answer("article", 0),
 		new Answer("menu", 0),
-		new Answer("command", 1),
+		new Answer("cmd", 1),
 		new Answer("navigation", 0),
 		new Answer("mark", 0)
 	]),
 
 	new Question("pre 标签有什么用?", 
 	[
-		new Answer("用于输出文本", 0),
+		new Answer("用于输出格式化文本", 1),
 		new Answer("显示报价", 0),
 		new Answer("用于输出地址", 0),
 		new Answer("用于输出缩写", 0),
