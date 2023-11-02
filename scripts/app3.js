@@ -25,6 +25,8 @@ class Quiz
 
 		//Номер текущего вопроса
 		this.current = 0;
+
+		this.language = localStorage.getItem('language');
 	}
 
 	Click(index)
@@ -147,7 +149,8 @@ const results = {
 	};
 
 //Массив с вопросами
-const questions_ru = 
+const questions = {
+'ru':
 [
 	new Question("Какой оператор используется для сравнения на равенство без учета типа? ", 
 	[
@@ -209,7 +212,7 @@ const questions_ru =
 	[
 		new Answer('document.querySelector("#elementId")', 0),
 		new Answer('document.getElementById("elementId")', 1),
-		new Answer('document.getElementsByClassName("elementId")[0]', 1),
+		new Answer('document.getElementsByClassName("elementId")[0]', 0),
 		new Answer('document.getElementsByTagName("div")[0]', 0)
 	]),
 
@@ -312,7 +315,7 @@ const questions_ru =
 	new Question("Каким образом можно сгенерировать случайное число в диапазоне от 1 до 10 в JavaScript?", 
 	[
 		new Answer("Math.random(1, 10);", 0),
-		new Answer("Math.random() * 10;", 1),
+		new Answer("Math.floor(Math.random() * 10)+1;", 1),
 		new Answer("Math.randomRange(1, 10);", 0),
 		new Answer("random(1, 10);", 0)
 	]),
@@ -374,15 +377,240 @@ const questions_ru =
 	]),
 
 	
-];
+], 'cn':[
+	new Question("哪个运算符用于比较数值而不考虑类型", 
+	[
+		new Answer("===", 0),
+		new Answer("==", 1),
+		new Answer("=!", 0),
+		new Answer("=:=", 0)
+	]),
+
+	new Question("如何在 JavaScript 中声明变量？", 
+	[
+		new Answer("var name;", 0),
+		new Answer("let name;", 0),
+		new Answer("variable name;", 0),
+		new Answer("答案 1 和 2", 1)
+	]),
+
+	new Question("哪种数组方法会在数组末尾添加一个元素", 
+	[
+		new Answer("shift()", 0),
+		new Answer("unshift()", 0),
+		new Answer("push()", 1),
+		new Answer("pop()", 0)
+	]),
+
+	new Question('操作符"！"有什么作用 ?', 
+	[
+		new Answer("乘法运算", 0),
+		new Answer("划分", 0),
+		new Answer("拒绝", 1),
+		new Answer("字符串连接", 0)
+	]),
+
+	new Question("以下哪种方法可以将字符串转换为数字？", 
+	[
+		new Answer("Number()", 0),
+		new Answer("ParseInt()", 0),
+		new Answer("ParseFloat", 0),
+		new Answer("全部", 1)
+	]),
+
+	new Question("如何在点击按钮时调用 JavaScript 函数？", 
+	[
+		new Answer('onclick="myFunction()"', 1),
+		new Answer('addEventListener("click", myFunction)', 0),
+		new Answer('button.onclick = myFunction()', 0),
+		new Answer('button.addEventListener("click", myFunction)', 0)
+	]),
+
+	new Question("如何将单独文件中的脚本添加到网页中？", 
+	[
+		new Answer('<script src="script.js"></script>', 1),
+		new Answer('<link rel="stylesheet" href="styles.css">', 0),
+		new Answer('<img src="image.jpg" alt="Image">', 0),
+		new Answer('<a href="page.html">Link</a>', 0)
+	]),
+
+	new Question("如何在 JavaScript 中通过 id 访问元素？", 
+	[
+		new Answer('document.querySelector("#elementId")', 0),
+		new Answer('document.getElementById("elementId")', 1),
+		new Answer('document.getElementsByClassName("elementId")[0]', 0),
+		new Answer('document.getElementsByTagName("div")[0]', 0)
+	]),
+
+	new Question("如何按 id 将网页元素写入变量？", 
+	[
+		new Answer('var element = document.getElementsByTagName("div")[0]', 0),
+		new Answer('var element = document.getElementsByClassName("elementId")[0]', 0),
+		new Answer('var element = document.querySelector("#elementId")', 0),
+		new Answer('var element = document.getElementById("elementId")', 1)
+	]),
+
+	new Question("如何从网页元素中获取属性？", 
+	[
+		new Answer('element.getAttribute("attributeName")', 1),
+		new Answer('element.attributeName', 0),
+		new Answer('element.getAttributeValue("attributeName")', 0),
+		new Answer('element.attribute("attributeName")', 0)
+	]),
+
+	new Question("如何将属性值转换为整数？", 
+	[
+		new Answer("Number(attributeValue)", 0),
+		new Answer("parseInt(attributeValue)", 1),
+		new Answer("parseFloat(attributeValue)", 0),
+		new Answer("attributeValue.toInt()", 0)
+	]),
+
+	new Question("如何将网页元素添加到数组中？", 
+	[
+		new Answer("array.unshift(element)", 0),
+		new Answer("array.append(element)", 0),
+		new Answer("array.add(element)", 0),
+		new Answer("array.push(element)", 1)
+	]),
+
+	new Question("如何清除数组", 
+	[
+		new Answer("array = []", 1),
+		new Answer("array.clear()", 0),
+		new Answer("array.empty()", 0),
+		new Answer("array.remove()", 0)
+	]),
+
+	new Question("如何检查数组是否有元素？", 
+	[
+		new Answer("array.length > 0", 1),
+		new Answer("array.isEmpty()", 0),
+		new Answer("array.hasElements()", 0),
+		new Answer("array.exists()", 0)
+	]),
+
+	new Question("如何检查元素是否具有命名属性？", 
+	[
+		new Answer('element.hasAttribute("attributeName")', 1),
+		new Answer('element.getAttribute("attributeName") !== null', 0),
+		new Answer('element.attributeName !== undefined', 0),
+		new Answer('element.containsAttribute("attributeName")', 0)
+	]),
+
+	new Question("如何在 JavaScript 中向控制台打印信息？", 
+	[
+		new Answer('console.logMessage("Hello");', 0),
+		new Answer('log.console("Hello");', 0),
+		new Answer('print("Hello");', 0),
+		new Answer('console.log("Hello");', 1)
+	]),
+
+	new Question("在 JavaScript 中，哪个字符用于单行注释？", 
+	[
+		new Answer("//", 1),
+		new Answer("--", 0),
+		new Answer("/*", 0),
+		new Answer("#", 0)
+	]),
+
+	new Question("哪个运算符用于比较 JavaScript 中的值，包括数据类型？", 
+	[
+		new Answer("==", 0),
+		new Answer("!=", 0),
+		new Answer("===", 1),
+		new Answer("!==", 0)
+	]),
+
+	new Question("如何在 JavaScript 中检查字符串的长度？", 
+	[
+		new Answer("string.count();", 0),
+		new Answer("string.size();", 0),
+		new Answer("string.length;", 1),
+		new Answer("string.checkLength();", 0)
+	]),
+
+	new Question("如何用 JavaScript 对数字进行四舍五入？", 
+	[
+		new Answer("Math.floor(num);", 0),
+		new Answer("Math.round(num);", 0),
+		new Answer("Math.ceil(num);", 0),
+		new Answer("以上所有方法", 1)
+	]),
+
+	new Question("如何用 JavaScript 生成介于 1 和 10 之间的随机数？", 
+	[
+		new Answer("Math.random(1, 10);", 0),
+		new Answer("Math.floor(Math.random() * 10)+1;", 1),
+		new Answer("Math.randomRange(1, 10);", 0),
+		new Answer("random(1, 10);", 0)
+	]),
+
+	new Question("如何在 JavaScript 中检查变量是否为数组？", 
+	[
+		new Answer(" isArray(variable);", 0),
+		new Answer("variable.isArray();", 0),
+		new Answer("variable instanceof Array;", 0),
+		new Answer("以上所有方法", 1)
+	]),
+
+	new Question("如何在 JavaScript 中声明函数？", 
+	[
+		new Answer("function myFunction() {}", 1),
+		new Answer("def myFunction() {}", 0),
+		new Answer("myFunction = function() {}", 0),
+		new Answer("let myFunction() {}", 0)
+	]),
+
+	new Question("如何在 JavaScript 中将字符串转换为大写字母？", 
+	[
+		new Answer("string.toUpperCase();", 1),
+		new Answer("string.toUpper();", 0),
+		new Answer("string.upperCase();", 0),
+		new Answer("string.upper();", 0)
+	]),
+
+	new Question("confirm 和 prompt 有什么区别？", 
+	[
+		new Answer("confirm 调用一个带有输入框的对话框， prompt - 一个确认窗口", 0),
+		new Answer("没有区别", 0),
+		new Answer("prompt 打开一个带有输入框的对话框，confirm 打开一个确认框", 1)
+	]),
+
+	new Question('将向变量写入什么内容？\nvar a = 5;\nvar test = 5 != a ? "是" : "没有";', 
+	[
+		new Answer("5", 0),
+		new Answer("将出现错误", 0),
+		new Answer("没有", 1),
+		new Answer("a", 0),
+		new Answer("是", 0)
+	]),
+
+	new Question('为什么下面的代码不起作用？\n<script type="javascript/text">\nconsole.log("Hi!")\n</script>\n', 
+	[
+		new Answer("type 属性的写法不正确", 1),
+		new Answer('console.log("Hi!") 后需要分号', 0),
+		new Answer('console.log 条目只能写入单独的文件中', 0)
+	]),
+
+	new Question("局部变量和全局变量有什么区别？", 
+	[
+		new Answer("全局的在任何地方都能看到，局部的只能在功能中看到", 1),
+		new Answer("没有区别", 0),
+		new Answer("全局的可以被覆盖，本地的不能", 0),
+		new Answer("局部变量随处可见，全局变量仅在函数中可见", 0),
+		new Answer("本地可以覆盖，全局不能", 0)
+	]),
+
+	
+]};
 
 function getRandomElements(array, count) {
 	const shuffled = array.sort(() => 0.5 - Math.random());
 	return shuffled.slice(0, count);
   };
-const current_questions = getRandomElements(questions,10);
 
-
+const current_questions = getRandomElements(questions[localStorage.getItem('language')],10);
 //Сам тест
 const quiz = new Quiz(1, current_questions, results);
 

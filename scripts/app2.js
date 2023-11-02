@@ -26,6 +26,8 @@ class Quiz
 
 		//Номер текущего вопроса
 		this.current = 0;
+
+		this.language = localStorage.getItem('language');
 	}
 
 	Click(index)
@@ -532,12 +534,12 @@ const questions =
 		new Answer("shadow", 0),
 		new Answer("box-shadow", 0)
 	]),
-	new Question("Какое свойство используется для внешней связи CSS-файлов с HTML?", 
+	new Question("哪个属性用于从外部将 CSS 文件链接到 HTML？", 
 	[
-		new Answer("<link>", 1),
-		new Answer("<style>", 0),
-		new Answer("<css>", 0),
-		new Answer("<stylesheet>", 0)
+		new Answer("&ltlink&gt", 1),
+		new Answer("&ltstyle&gt", 0),
+		new Answer("&ltcss&gt", 0),
+		new Answer("&ltstylesheet&gt", 0)
 	]),
 	new Question("CSS 中的线高属性有什么作用？", 
 	[
@@ -582,7 +584,7 @@ function getRandomElements(array, count) {
 	const shuffled = array.sort(() => 0.5 - Math.random());
 	return shuffled.slice(0, count);
   };
-const current_questions = getRandomElements(questions,10);
+const current_questions = getRandomElements(questions[localStorage.getItem('language')],10);
 
 //Сам тест
 const quiz = new Quiz(1, current_questions, results);
