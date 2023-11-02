@@ -645,7 +645,7 @@ function Update()
 		pagesElem.innerHTML = (quiz.current + 1) + " / " + quiz.questions.length;
 
 		//Вызываем функцию, которая прикрепит события к новым кнопкам
-		Init();
+		AddClicks();
 	}
 	else
 	{
@@ -660,16 +660,28 @@ function Update()
 	}
 }
 
-function Init()
+function AddClicks()
 {
 	//Находим все кнопки
 	let btns = document.getElementsByClassName("button");
 
+	
 	for(let i = 0; i < btns.length; i++)
 	{
 		//Прикрепляем событие для каждой отдельной кнопки
 		//При нажатии на кнопку будет вызываться функция Click()
+
 		btns[i].addEventListener("click", function (e) { Click(e.target.getAttribute("index")); });
+	}
+}
+
+function DisableButtons()
+{
+	let btns = document.getElementsByClassName("button");
+	for(let i = 0; i < btns.length; i++)
+	{
+		
+		btns[i].disabled = true;
 	}
 }
 
@@ -677,7 +689,7 @@ function Click(index)
 {
 	//Получаем номер правильного ответа
 	let correct = quiz.Click(index);
-
+	DisableButtons();
 	//Находим все кнопки
 	let btns = document.getElementsByClassName("button");
 
