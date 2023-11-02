@@ -30,6 +30,9 @@ function changeLanguage(){
 function loading(){
     var language = localStorage.getItem('language')
     console.log(language)
+    var test1_r = localStorage.getItem('html_hasR');
+    var test2_r = localStorage.getItem('css_hasR');
+    var test3_r = localStorage.getItem('js_hasR');
     if(language==null){
         localStorage.setItem('language','ru')
     }
@@ -54,6 +57,24 @@ function loading(){
         document.getElementById('js_about').textContent = 'Тест на знание материала по JS'
         document.getElementById('js_questions').textContent = '10 вопросов'
         document.getElementById('b_text').textContent = 'ВлГУ. ИиТР. Кафедра ИСПИ. 2023.'
+    }
+    if(test1_r == null){
+        localStorage.setItem('html_hasR',0)
+    }
+    else{
+        document.getElementById('btn1').style.pointerEvents = 'none';
+    }
+    if(test2_r == null){
+        localStorage.setItem('css_hasR',0)
+    }
+    else{
+        document.getElementById('btn2').style.pointerEvents = 'none';
+    }
+    if(test3_r == null){
+        localStorage.setItem('js_hasR',0)
+    }
+    else{
+        document.getElementById('btn3').style.pointerEvents = 'none';
     }
     var html =localStorage.getItem('html')
     var css = localStorage.getItem('css')
