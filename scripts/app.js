@@ -708,9 +708,6 @@ function Click(index)
 	//Выключаем кнопки
 	DisableButtons();
 
-
-	
-
 	//Ждём секунду и обновляем тест
 	setTimeout(Update, 500);
 }
