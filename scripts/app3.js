@@ -654,6 +654,7 @@ function Update()
 		headElem.innerHTML = quiz.results[localStorage.getItem('language')][quiz.result].text;
 		pagesElem.innerHTML = "Очки: " + quiz.score;
 		localStorage.setItem('js',quiz.score);
+		localStorage.setItem('js_hasR', 1); 
 		var timer = setTimeout(function() {
             window.location='index.html'
         }, 5000);
