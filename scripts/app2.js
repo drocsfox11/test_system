@@ -148,8 +148,8 @@ const results = {
 	};
 
 //Массив с вопросами
-const questions = 
-[
+const questions =
+{"ru": [
 	new Question("Что делает свойство 'display: none;'?", 
 	[
 		new Answer("Скрывает элемент, но он продолжает занимать пространство на странице", 0),
@@ -213,7 +213,7 @@ const questions =
 		new Answer("font-size", 1),
 		new Answer("font-family", 0)
 	]),
-	new Question("Что делает padding: 20px 10px 5px;?", 
+	new Question("Что делает 'padding: 20px 10px 5px;'?", 
 	[
 		new Answer("Устанавливает внешний отступ 20px сверху, 10px справа и слева, 5px снизу", 0),
 		new Answer("Устанавливает внутренний отступ 20px сверху, 10px справа и слева, 5px снизу", 1),
@@ -248,11 +248,11 @@ const questions =
 		new Answer("E > F", 0),
 		new Answer("E F", 0)
 	]),
-	new Question("Что делает font-weight: bold;?", 
+	new Question("Что делает 'font-weight: bold;'?", 
 	[
 		new Answer("Изменяет размер шрифта на более крупный", 0),
-		new Answer("Делает текст жирным", 0),
-		new Answer("Меняет шрифт на полужирный", 1),
+		new Answer("Делает текст жирным", 1),
+		new Answer("Меняет шрифт на полужирный", ),
 		new Answer("Устанавливает специальный шрифт для заголовков", 0)
 	]),
 	new Question("Какое свойство задаёт внешний отступ элемента?", 
@@ -269,14 +269,314 @@ const questions =
 		new Answer("Делает текст жирным", 0),
 		new Answer("Изменяет шрифт на капитель", 0)
 	]),
-	new Question("Что означает 'color: rgba(0,0,0,0.5);?'", 
+	new Question("Что означает 'color: rgba(0,0,0,0.5);'?", 
 	[
 		new Answer("Черный цвет с 50% прозрачностью", 1),
 		new Answer("Белый цвет с 50% прозрачностью", 0),
 		new Answer("Красный цвет с 50% прозрачностью", 0),
 		new Answer("Прозрачный цвет", 0)
+	]),
+	new Question("Какой селектор выберет все параграфы (&ltp&gt) внутри элемента с классом container?", 
+	[
+		new Answer("p container", 0),
+		new Answer(".container p", 1),
+		new Answer("container > p", 0),
+		new Answer("p + .container", 0)
+	]),
+	new Question("Для чего используется свойство 'border-radius'?", 
+	[
+		new Answer("Для создания границы вокруг элемента", 0),
+		new Answer("Для добавления тени элементу", 0),
+		new Answer("Для создания скругленных углов", 1),
+		new Answer("Для изменения размера элемента", 0)
+	]),
+	new Question("Какой свойство CSS устанавливает цвет фона элемента?", 
+	[
+		new Answer("background", 0),
+		new Answer("color", 0),
+		new Answer("bg-color", 0),
+		new Answer("background-color", 1)
+	]),
+	new Question("Какой из этих цветов соответствует #ffffff?", 
+	[
+		new Answer("Черный", 0),
+		new Answer("Красный", 0),
+		new Answer("Зеленый", 0),
+		new Answer("Белый", 1)
+	]),
+	new Question("Какой псевдокласс используется для стилизации элемента при наведении курсора?", 
+	[
+		new Answer(":focus", 0),
+		new Answer(":click", 0),
+		new Answer(":active", 0),
+		new Answer(":hover", 1)
+	]),
+	new Question("Какое свойство задает тень для текста?", 
+	[
+		new Answer("text-shadow", 1),
+		new Answer("font-shadow", 0),
+		new Answer("shadow", 0),
+		new Answer("box-shadow", 0)
+	]),
+	new Question("Какой атрибут используется для внешнего соединения CSS файла с HTML?", 
+	[
+		new Answer("<link>", 1),
+		new Answer("<style>", 0),
+		new Answer("<css>", 0),
+		new Answer("<stylesheet>", 0)
+	]),
+	new Question("Что делает line-height в CSS?", 
+	[
+		new Answer("Изменяет ширину текста", 0),
+		new Answer("Изменяет высоту строк текста", 1),
+		new Answer("Добавляет подчеркивание к тексту", 0),
+		new Answer("Изменяет интервал между буквами", 0)
+	]),
+	new Question("Какое свойство используется для стилизации списков?", 
+	[
+		new Answer("list-style", 1),
+		new Answer("list-decoration", 0),
+		new Answer("list-type", 0),
+		new Answer("list-item", 0)
+	]),
+	new Question("Какой псевдокласс используется для стилизации посещенной ссылки?", 
+	[
+		new Answer(":link", 0),
+		new Answer(":visited", 1),
+		new Answer(":active", 0),
+		new Answer(":hover", 0)
+	]),
+	new Question("Что определяет свойство 'transition delay'?", 
+	[
+		new Answer("Список свойств, которые будут анимироваться", 0),
+		new Answer("Продолжительность анимации", 0),
+		new Answer("Задержка перед началом анимации", 1),
+		new Answer("Вид распределения анимации во времени", 0)
+	]),
+	new Question("Что делает свойство 'font-family'?", 
+	[
+		new Answer("Задает стиль текста (например наклонный)", 0),
+		new Answer("Задает список шрифтов", 1),
+		new Answer("Определяет вид маркера списка", 0),
+		new Answer("Задает отступ первой строки", 0)
 	])
-];
+
+],
+"cn":
+	[
+		new Question("display: none; 属性有什么作用？", 
+	[
+		new Answer("隐藏元素，但它仍然占用页面上的空间", 0),
+		new Answer("У从页面中删除元素", 0),
+		new Answer("隐藏元素，并且它不占用页面上的空间", 1),
+		new Answer("使元素变得透明", 0)
+	]),
+	new Question("哪个属性用于更改文字的颜色？", 
+	[
+		new Answer("text-color", 0),
+		new Answer("color", 1),
+		new Answer("font-color", 0),
+		new Answer("text-style", 0)
+	]),
+	new Question("以下 CSS 代码的结果如何：body { font-size: 100%; }？", 
+	[
+		new Answer("<body> 标记中文本的字体大小将加倍", 0),
+		new Answer("<body> 标记中的文本字体大小将等于默认字体大小", 1),
+		new Answer("<body> 标记中的文本字体大小将减小为 0", 0),
+		new Answer("此代码无效果", 0)
+	]),
+	new Question("哪个选择器可选择 &ltdiv&gt 元素内的所有 &ltp&gt 元素？", 
+	[
+		new Answer("div + p", 0),
+		new Answer("div p", 1),
+		new Answer("div > p", 0),
+		new Answer("p > div", 0)
+	]),
+	new Question("К哪个 position 属性值能使元素相对于其原始位置定位？", 
+	[
+		new Answer("absolute", 0),
+		new Answer("fixed", 0),
+		new Answer("relative", 1),
+		new Answer("static", 0)
+	]),
+	new Question("哪个属性用于改变元素的透明度？", 
+	[
+		new Answer("opacity", 1),
+		new Answer("transparent", 0),
+		new Answer("visibility", 0),
+		new Answer("alpha", 0)
+	]),
+	new Question("什么是 CSS 中的伪类？", 
+	[
+		new Answer("一个添加到 HTML 中的特殊类", 0),
+		new Answer("定义元素特定状态的选择器", 1),
+		new Answer("仅在 CSS 中使用的标签", 0),
+		new Answer("自动应用于所有元素的类", 0)
+	]),
+	new Question("哪个 CSS 选择器用于为具有特定 id 的元素设计样式？", 
+	[
+		new Answer("`.`", 0),
+		new Answer("`#`", 1),
+		new Answer("`:`", 0),
+		new Answer("`@`", 0)
+	]),
+	new Question("哪个属性允许您控制字体大小？", 
+	[
+		new Answer("font-weight", 0),
+		new Answer("font-style", 0),
+		new Answer("font-size", 1),
+		new Answer("font-family", 0)
+	]),
+	new Question("padding: 20px 10px 5px 5px; 有什么作用？", 
+	[
+		new Answer("设置上方的外边距为 20px，左右为 10px，下方为 5px", 0),
+		new Answer("设置上方的内边距为 20px，左右为 10px，下方为 5px", 1),
+		new Answer("设置上方的外边距为 20px，右侧为 10px，下方和左侧为 5px", 0),
+		new Answer("设置上方的内边距为 20px，右侧为 10px，下方和左侧为 5px", 0)
+	]),
+	new Question("CSS 中的 `em` 是什么？", 
+	[
+		new Answer("相当于一个像素宽度的绝对度量单位", 0),
+		new Answer("基于父元素字体大小的相对度量单位", 1),
+		new Answer("用于颜色的度量单位", 0),
+		new Answer("元素宽度的全局常量", 0)
+	]),
+	new Question("位置属性的哪个值可以使元素在页面滚动时保持固定位置？", 
+	[
+		new Answer("relative", 0),
+		new Answer("absolute", 0),
+		new Answer("fixed", 1),
+		new Answer("static", 0)
+	]),
+	new Question("哪个 CSS 属性可以设置元素的阴影？", 
+	[
+		new Answer("box-shadow", 1),
+		new Answer("text-shadow", 0),
+		new Answer("border-shadow", 0),
+		new Answer("element-shadow", 0)
+	]),
+	new Question("如果元素 (F) 紧随在特定元素 (E) 之后，并且它们有共同的父元素，使用哪种选择器来选择元素 (F)？", 
+	[
+		new Answer("E ~ F", 0),
+		new Answer("E + F", 1),
+		new Answer("E > F", 0),
+		new Answer("E F", 0)
+	]),
+	new Question("‘font-weight: bold;’ 的作用是什么？", 
+    [
+        new Answer("将字体大小更改为更大", 0),
+        new Answer("使文本加粗", 1),
+        new Answer("将字体更改为半粗体", 0),
+        new Answer("为标题设置特殊字体", 0)
+    ]),
+	new Question("哪个属性可以设置元素的外部缩进？", 
+	[
+		new Answer("padding", 0),
+		new Answer("margin", 1),
+		new Answer("border", 0),
+		new Answer("outline", 0)
+	]),
+	new Question("‘text-transform: uppercase;’ 属性的作用是什么？", 
+	[
+		new Answer("将文本的所有字符转换为大写", 1),
+		new Answer("增大文本大小", 0),
+		new Answer("使文本加粗", 0),
+		new Answer("将字体更改为小型大写字母", 0)
+	]),
+	new Question("‘color: rgba(0,0,0,0.5);’ 意味着什么？", 
+	[
+		new Answer("黑色，透明度50%", 1),
+		new Answer("白色，透明度50%", 0),
+		new Answer("红色，透明度50%", 0),
+		new Answer("透明色", 0)
+	]),
+	new Question("哪个选择器将选择类为 container 的元素内的所有段落 (&ltp&gt)？", 
+	[
+		new Answer("p container", 0),
+		new Answer(".container p", 1),
+		new Answer("container > p", 0),
+		new Answer("p + .container", 0)
+	]),
+	new Question("'border-radius' 属性的用途是什么？", 
+	[
+		new Answer("为元素创建一个边框", 0),
+		new Answer("为元素添加阴影", 0),
+		new Answer("创建圆角", 1),
+		new Answer("改变元素的大小", 0)
+	]),
+	new Question("哪个 CSS 属性可以设置元素的背景颜色？", 
+	[
+		new Answer("background", 0),
+		new Answer("color", 0),
+		new Answer("bg-color", 0),
+		new Answer("background-color", 1)
+	]),
+	new Question("以下哪种颜色对应于 #ffffff？", 
+	[
+		new Answer("黑色", 0),
+		new Answer("红色", 0),
+		new Answer("绿化", 0),
+		new Answer("白色", 1)
+	]),
+	new Question("哪个伪类用于在元素悬停时设置样式？", 
+	[
+		new Answer(":focus", 0),
+		new Answer(":click", 0),
+		new Answer(":active", 0),
+		new Answer(":hover", 1)
+	]),
+	new Question("哪个属性为文本设置阴影？", 
+	[
+		new Answer("text-shadow", 1),
+		new Answer("font-shadow", 0),
+		new Answer("shadow", 0),
+		new Answer("box-shadow", 0)
+	]),
+	new Question("Какое свойство используется для внешней связи CSS-файлов с HTML?", 
+	[
+		new Answer("<link>", 1),
+		new Answer("<style>", 0),
+		new Answer("<css>", 0),
+		new Answer("<stylesheet>", 0)
+	]),
+	new Question("CSS 中的线高属性有什么作用？", 
+	[
+		new Answer("改变文本宽度", 0),
+		new Answer("改变文本行高", 1),
+		new Answer("给文本添加下划线", 0),
+		new Answer("改变字母间距", 0)
+	]),
+	new Question("哪个属性用于给列表添加样式？", 
+	[
+		new Answer("list-style", 1),
+		new Answer("list-decoration", 0),
+		new Answer("list-type", 0),
+		new Answer("list-item", 0)
+	]),
+	new Question("哪个伪类用于样式化访问过的链接？", 
+	[
+		new Answer(":link", 0),
+		new Answer(":visited", 1),
+		new Answer(":active", 0),
+		new Answer(":hover", 0)
+	]),
+	new Question("‘transition delay’ 属性定义了什么？", 
+	[
+		new Answer("将要进行动画处理的属性列表", 0),
+		new Answer("动画的持续时间", 0),
+		new Answer("动画开始前的延迟", 1),
+		new Answer("动画时间分布的类型", 0)
+	]),
+	new Question("‘font-family’ 属性有什么作用？", 
+	[
+		new Answer("设定文本样式（例如斜体）", 0),
+		new Answer("设定字体列表", 1),
+		new Answer("确定列表标记的样式", 0),
+		new Answer("设定首行缩进", 0)
+	])
+
+]
+};
 
 function getRandomElements(array, count) {
 	const shuffled = array.sort(() => 0.5 - Math.random());
