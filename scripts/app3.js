@@ -202,10 +202,10 @@ const questions = {
 
 	new Question("Как добавить к веб-странице скрипт из отдельного файла?", 
 	[
-		new Answer('<script src="script.js"></script>', 1),
-		new Answer('<link rel="stylesheet" href="styles.css">', 0),
-		new Answer('<img src="image.jpg" alt="Image">', 0),
-		new Answer('<a href="page.html">Link</a>', 0)
+		new Answer('&ltscript src="script.js"&gt&lt/script&gt', 1),
+		new Answer('&ltlink rel="stylesheet" href="styles.css"&gt', 0),
+		new Answer('&ltimg src="image.jpg" alt="Image"&gt', 0),
+		new Answer('&lta href="page.html"&gtLink&lt/a&gt', 0)
 	]),
 
 	new Question("Как получить доступ к элементу по его id в языке JavaScript?", 
@@ -360,7 +360,7 @@ const questions = {
 		new Answer("Yes", 0)
 	]),
 
-	new Question('Почему код ниже не будет работать?\n<script type="javascript/text">\nconsole.log("Hi!")\n</script>\n', 
+	new Question('Почему код ниже не будет работать?\n&ltscript type="javascript/text"&gt\nconsole.log("Hi!")\n&lt/script&gt\n', 
 	[
 		new Answer("Неверно записан атрибут type", 1),
 		new Answer('Необходима точка с запятой после console.log("Hi!")', 0),
@@ -428,10 +428,10 @@ const questions = {
 
 	new Question("如何将单独文件中的脚本添加到网页中？", 
 	[
-		new Answer('<script src="script.js"></script>', 1),
-		new Answer('<link rel="stylesheet" href="styles.css">', 0),
-		new Answer('<img src="image.jpg" alt="Image">', 0),
-		new Answer('<a href="page.html">Link</a>', 0)
+		new Answer('&ltscript src="script.js"&gt&lt/script&gt', 1),
+		new Answer('&ltlink rel="stylesheet" href="styles.css"&gt', 0),
+		new Answer('&ltimg src="image.jpg" alt="Image"&gt', 0),
+		new Answer('&lta href="page.html"&gtLink&lt/a&gt', 0)
 	]),
 
 	new Question("如何在 JavaScript 中通过 id 访问元素？", 
@@ -586,7 +586,7 @@ const questions = {
 		new Answer("是", 0)
 	]),
 
-	new Question('为什么下面的代码不起作用？\n<script type="javascript/text">\nconsole.log("Hi!")\n</script>\n', 
+	new Question('为什么下面的代码不起作用？\n&ltscript type="javascript/text"&gt\nconsole.log("Hi!")\n&lt/script&gt\n', 
 	[
 		new Answer("type 属性的写法不正确", 1),
 		new Answer('console.log("Hi!") 后需要分号', 0),
