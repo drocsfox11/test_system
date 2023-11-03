@@ -196,7 +196,7 @@ const questions = {
 	new Question("Как создать текст со шрифтом italic?", 
 	[
 		new Answer("&ltem&gtТекст&lt/em&gt", 1),
-		new Answer("&ltitalic>Текст&lt/italic&gt", 0),
+		new Answer("&ltitalic&gtТекст&lt/italic&gt", 0),
 		new Answer("&lti&gtТекст&lt/i&gt", 0),
 		new Answer("&ltstrong&gtТекст&lt/strong&gt", 0)
 	]),
@@ -420,7 +420,7 @@ const questions = {
 		new Answer("// 这是一个 HTML 注释", 0),
 	]),
 
-	new Question("H3 是最重要的 <h> 标记", 
+	new Question("H3 是最重要的 &lth&gt 标记", 
 	[
 		new Answer("没错", 0),
 		new Answer("错误", 1),
@@ -429,7 +429,7 @@ const questions = {
 	new Question("如何创建斜体文本？", 
 	[
 		new Answer("&ltem&gt&lt/em&gt", 1),
-		new Answer("&ltitalic>&lt/italic&gt", 0),
+		new Answer("&ltitalic&gt&lt/italic&gt", 0),
 		new Answer("&lti&gt&lt/i&gt", 0),
 		new Answer("&ltstrong&gt&lt/strong&gt", 0)
 	]),
