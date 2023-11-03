@@ -322,10 +322,10 @@ const questions =
 	]),
 	new Question("Какой атрибут используется для внешнего соединения CSS файла с HTML?", 
 	[
-		new Answer("<link>", 1),
-		new Answer("<style>", 0),
-		new Answer("<css>", 0),
-		new Answer("<stylesheet>", 0)
+		new Answer("&ltlink&gt", 1),
+		new Answer("&ltstyle&gt", 0),
+		new Answer("&ltcss&gt", 0),
+		new Answer("&ltstylesheet&gt", 0)
 	]),
 	new Question("Что делает line-height в CSS?", 
 	[
