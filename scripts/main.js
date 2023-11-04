@@ -17,9 +17,9 @@ function changeLanguage(){
         document.getElementById('main_h').textContent = '课程：静态设计';
         document.getElementById('html_about').textContent = '材料知识测试 HTML'
         document.getElementById('html_questions').textContent = '10 个问题'
-        document.getElementById('css_about').textContent = '材料知识测试 HTML'
+        document.getElementById('css_about').textContent = 'CSS 知识测试'
         document.getElementById('css_questions').textContent = '10 个问题'
-        document.getElementById('js_about').textContent = '材料知识测试 HTML'
+        document.getElementById('js_about').textContent = 'JS 知识测试'
         document.getElementById('js_questions').textContent = '10 个问题'
         document.getElementById('b_text').textContent = 'VLSU。 I&TR。 ISPI 部门。 2023 年。'
 
